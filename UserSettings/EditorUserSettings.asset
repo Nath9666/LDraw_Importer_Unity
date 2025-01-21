@@ -20,6 +20,12 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-4:
       value: 0752550754040d0c080c5e764571084415161e2c7d297e69757c1860b4b3646d
       flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 51525005515659580c5d0e7314265b44104e4d2f2f79703428714d60e4e26361
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0004505e55000d5e55595c2140200a444115197f7f7071677c7e4a31e3e5616c
+      flags: 0
     lightmappingDeviceAndPlatform:
       value: 53
       flags: 0
@@ -40,6 +46,5 @@ EditorUserSettings:
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 0
-  m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
   m_CompressAssetsOnImport: 1
