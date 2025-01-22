@@ -148,6 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _OriginPlaneNormalDirection: {x: 0, y: 0, z: 0}
+  _pieceName: 3003
+  _piecePath: .\blueprints\base-parts\
+  _pieceMaterial: {fileID: 0}
 --- !u!4 &166092157
 Transform:
   m_ObjectHideFlags: 0
