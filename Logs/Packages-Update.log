@@ -21,3 +21,11 @@ The following packages were updated:
   com.unity.xr.legacyinputhelpers from version 2.1.4 to 2.1.11
 The following packages were removed:
   com.unity.textmeshpro@3.0.0-preview.1
+
+=== Wed Jan 22 14:12:18 2025
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 2.5.2 to 2.6.0
