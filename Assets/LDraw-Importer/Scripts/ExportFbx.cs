@@ -11,41 +11,9 @@ public class ExportFbx : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pieces = new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"));
         if (pieceId != null)
         {
-            RemoveOtherPiecesWithId(pieceId.name, pieceId);
             ExportToFbx(pieceId);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    GameObject FindFirstPieceWithId(string pieceId)
-    {
-        foreach (GameObject piece in pieces)
-        {
-            if (piece.name == pieceId) // Assuming the piece ID is stored in the name
-            {
-                return piece;
-            }
-        }
-        return null;
-    }
-
-    void RemoveOtherPiecesWithId(string pieceId, GameObject firstPiece)
-    {
-        for (int i = pieces.Count - 1; i >= 0; i--)
-        {
-            if (pieces[i].name == pieceId && pieces[i] != firstPiece)
-            {
-                Destroy(pieces[i]);
-                pieces.RemoveAt(i);
-            }
         }
     }
 
@@ -53,13 +21,18 @@ public class ExportFbx : MonoBehaviour
     {
         // Define the path where the FBX file will be saved
         string path = "Assets/Exports/" + piece.name + ".fbx";
-
+    
         // Ensure the directory exists
         System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(path));
-
+    
+        // Create export options
+        var exportOptions = new ExportModelSettings();
+        exportOptions.ModelFormat = ModelSettings.ModelFormat.Fbx;
+        exportOptions.FbxExportFormat = ExportSettings.ExportFormat.Binary;
+    
         // Export the GameObject to an FBX file
-        ModelExporter.ExportObject(path, piece);
-
+        ModelExporter.ExportObject(path, piece, exportOptions);
+    
         Debug.Log("Exported " + piece.name + " to " + path);
     }
 }
